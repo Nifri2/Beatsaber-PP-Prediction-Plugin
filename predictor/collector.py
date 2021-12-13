@@ -10,7 +10,7 @@ import sys
 
 def getSongLeaderboard(songHash,diff,page):
     r = requests.get(
-       f"https://scoresaber.com/api/leaderboard/by-hash/{songHash}/scores?difficulty={diff}&page={page}")
+        f"https://scoresaber.com/api/leaderboard/by-hash/{songHash}/scores?difficulty={diff}&page={page}")
     return json.loads(r.text)['scores']
 
 def calcMetadata(songHash,diff):
