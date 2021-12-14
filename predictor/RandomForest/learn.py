@@ -4,7 +4,7 @@ import pandas as pd
 import pickle
 
 data = pd.read_csv("collected/dataset.csv",delimiter=';')
-
+    
 x = []
 y = []
 

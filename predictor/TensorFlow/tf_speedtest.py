@@ -2,6 +2,7 @@ from tensorflow.keras.models import Sequential
 from tensorflow.keras.layers import Dense
 from matplotlib import pyplot as plt
 from tqdm import tqdm
+import tensorflow as tf
 import requests
 import time
 import json
@@ -11,13 +12,16 @@ pdata = []
 
 def buildModel():
     model = Sequential()
-    model.add(Dense(40, activation="tanh", input_dim=2, kernel_initializer="uniform"))
-    model.add(Dense(1, activation="linear", kernel_initializer="uniform"))
+    model.add(Dense(50, input_dim=2, kernel_initializer='uniform', activation='relu'))
+    model.add(Dense(100, kernel_initializer='uniform', activation='relu'))
+    model.add(Dense(100, kernel_initializer='uniform', activation='relu'))
+    model.add(Dense(100, kernel_initializer='uniform', activation='relu'))
+    model.add(Dense(1, kernel_initializer='uniform', activation='linear'))
     model.compile(loss='mse', optimizer='adam', metrics=['accuracy'])
     return model
 
-model = buildModel()
-model.load_weights('tf_weights')
+with tf.device("/gpu:0"):
+    model = tf.keras.models.load_model('checkpoints/model.h5')
 
 now = time.time()
 for j in range(1,15):
