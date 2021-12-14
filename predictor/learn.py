@@ -1,7 +1,6 @@
 import matplotlib.pyplot as plt
 from sklearn.ensemble import RandomForestRegressor
 import pandas as pd
-import numpy as np
 import pickle
 
 data = pd.read_csv("collected/dataset.csv",delimiter=';')
