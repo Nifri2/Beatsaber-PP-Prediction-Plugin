@@ -14,7 +14,7 @@ The plugin sends this data to the API on each note hit and displays the Predicte
 ## Digging Deeper
 Using the 112302 data blocks we fitted a RandomForestRegressor and found out that it sucks. Like seriosly look at these predicitons.  
 
-The lines are X = Acc and Y = Stars   
+The lines are Stars (1-14), X = Acc and Y = PP   
 
 ![PP Prediction](https://github.com/Nifri2/Beatsaber-PP-Prediction-Plugin/blob/main/assets/randomforest.png?raw=true)
 
