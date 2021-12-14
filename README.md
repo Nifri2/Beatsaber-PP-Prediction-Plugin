@@ -10,5 +10,5 @@ add shit here
 
 ## How it works
 The Plugin starts a Flask API written in Python that has been Compiled with [Pyinstaller](https://www.pyinstaller.org/) on Port 5000.   
-The API has one endpoint called /predict which only accepts POST requets with a dala structure like `{"stars": 6.68, "acc": 0.8943}`   
+The API has one endpoint called `/predict` which only accepts POST requets with a data structure like `{"stars": 6.68, "acc": 0.8943}`   
 The plugin sends this data to the API on each note hit and displays the Predicted PP.
