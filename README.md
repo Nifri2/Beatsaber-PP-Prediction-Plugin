@@ -17,5 +17,6 @@ Using the 112302 data blocks we trained a RandomForestRegressor and found out th
 ![PP Prediction](https://github.com/Nifri2/Beatsaber-PP-Prediction-Plugin/blob/main/assets/randomforest.png?raw=true)
 
 
-So we used the dataset to train an AI in Tensorflow that had a WAY better prediciton, but it was slow so we used it to predict a new dataset of 140100 entries. And this one is really accurate.
+So we used the dataset to train an AI in Tensorflow that had a WAY better prediciton, but it was slow so we used it to predict a new dataset of 140100 entries. And this one is really accurate.   
+
 ![PP Prediction](https://github.com/Nifri2/Beatsaber-PP-Prediction-Plugin/blob/main/assets/Ai-Graph.png?raw=true)
