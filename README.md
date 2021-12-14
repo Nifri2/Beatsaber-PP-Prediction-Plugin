@@ -14,7 +14,7 @@ The plugin sends this data to the API on each note hit and displays the Predicte
 ## Digging Deeper
 Using the 112302 data blocks we trained a RandomForestRegressor and found out that it sucks. Like realy look at these predicitons.   
 
-[PP Prediction]('./assests/randomforest.png')
+[PP Prediction](/assests/randomforest.png)
 
 
 So we used the dataset to train an AI in Tensorflow that had a WAY better prediciton, but it was slow so we used it to predict a new dataset of 140100 entries. And this one is really accurate.
