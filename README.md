@@ -2,9 +2,13 @@
 Plugin to Predictlive PP Values using a[RandomForestRegressor](https://scikit-learn.org/stable/modules/generated/sklearn.ensemble.RandomForestRegressor.html) weightned on 112302 scores from [Scoresaber](https://www.scoresaber.com/).   
 
 Working on a TensorFlow LITE implementation of the model because the data is less Leaky.   
-The RandomForestRegressor runs at about 300 Iterarions a second while a trained Keras Model runs at 30 Iterations a Second (Messured on a Ryzen 5900x).   
+
+The RandomForestRegressor runs at about 300 Iterarions a second while a trained Keras Model runs at 30 Iterations a second (Messured on a Ryzen 5900x).   
 
 ## Installation
 add shit here   
 
-## facts n shit
+## How it works
+The Plugin starts a Flask API written in Python that has been Compiled with [Pyinstaller](https://www.pyinstaller.org/) on Port 5000.   
+The API has one endpoint called /predict which only accepts POST requets with a dala structure like `{"stars": 6.68, "acc": 0.8943}`   
+The plugin sends this data to the API on each note hit and displays the Predicted PP.
