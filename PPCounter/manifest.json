@@ -1,0 +1,26 @@
+﻿{
+  "$schema": "https://raw.githubusercontent.com/beat-saber-modding-group/BSIPA-MetadataFileSchema/master/Schema.json",
+  "id": "PP counter",
+  "name": "PP counter",
+  "author": "Nifri and Mienfoo",
+  "version": "1.0.0",
+  "description": "Calculates an estimate of your PP in realtime using fancy AI magic",
+  "gameVersion": "^1.16.2",
+  "dependsOn": {
+    "Counters+": "^2.2.0",
+    "SiraUtil": "^2.4.0",
+    "BSIPA": "^4.1.4"
+  },
+  "features": {
+    "CountersPlus.CustomCounter": {
+      "Name": "PP Counter",
+      "Description": "Calculates an estimate of your PP in realtime using fancy AI magic",
+      "CounterLocation": "PPCounter.PPCounter",
+      "ConfigDefaults": {
+        "Enabled": true,
+        "Position": "AboveMultiplier",
+        "Distance": 0
+      }
+    }
+  }
+}
