@@ -12,10 +12,13 @@ The API has one endpoint called `/predict` which only accepts POST requets with 
 The plugin sends this data to the API on each note hit and displays the Predicted PP.
 
 ## Digging Deeper
-Using the 112302 data blocks we trained a RandomForestRegressor and found out that it sucks. Like realy look at these predicitons.   
+Using the 112302 data blocks we fitted a RandomForestRegressor and found out that it sucks. Like seriosly look at these predicitons.  
 
-[PP Prediction](assests/randomforest.png)
+The lines are Stars (1-14), X = Acc and Y = PP   
+
+![PP Prediction](https://github.com/Nifri2/Beatsaber-PP-Prediction-Plugin/blob/main/assets/randomforest.png?raw=true)
 
 
-So we used the dataset to train an AI in Tensorflow that had a WAY better prediciton, but it was slow so we used it to predict a new dataset of 140100 entries. And this one is really accurate.
+So we used the dataset to train an AI in Tensorflow that had a WAY better prediciton, but it was slow so we used it to predict a new dataset of 140100 entries. And this one is really accurate.   
 
+![PP Prediction](https://github.com/Nifri2/Beatsaber-PP-Prediction-Plugin/blob/main/assets/Ai-Graph.png?raw=true)
