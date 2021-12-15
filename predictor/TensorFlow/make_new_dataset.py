@@ -27,9 +27,9 @@ dataset = []
 for stars in tqdm(range(1,1401)):
 	for acc in range(1,100):
 		dataset.append([
-            acc/100,
             stars/100,
-            model.predict([[acc/100,stars/100]])
+            acc/100,
+            model.predict([[stars/100,acc/100]])[0][0] 
         ])
 
 with open('collected/new_dataset.csv', 'wb') as file:
