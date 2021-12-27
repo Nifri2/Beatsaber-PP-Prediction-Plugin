@@ -15,7 +15,7 @@ Drag the `PPP.dll` into your BeatSaber mods folder.
 An automatic installation routine will download missing parts.
 
 ## Different Modes
-In the configuration file ((OR COUNTERS++ SETTIGNS)) `path/to/config.json`, you can choose one of 2 modes. (NAME OF MODE 1) will take your current accuracy `current_points / max_points_until_now` (`max_points_until_now += 115 # for every notehit`) to predict scores, (NAME OF MODE 2) will use `current_points / max_points` to get a PP curve like those in Osu! Plugins that builds up over time. that means your PP score will be low for most of the song and climb towards teh end of the song.
+In the configuration file ((OR COUNTERS++ SETTIGNS)) `path/to/config.json`, you can choose one of 2 modes. (NAME OF MODE 1) will take your current accuracy `current_points / max_points_until_now` (`max_points_until_now += 115 * max_possible_combo # for every notehit`) to predict scores, (NAME OF MODE 2) will use `current_points / max_points` to get a PP curve like those in Osu! Plugins that builds up over time. that means your PP score will be low for most of the song and climb towards teh end of the song.
 
 # Nerd Stuff
 ## How it works
