@@ -1,4 +1,4 @@
-# Contents
+# Work in progress project
 
 * [About](#beatsaber-pp-prediction-plugin)
 * [Installation](#installation)
