@@ -1,12 +1,13 @@
-# yea
+# Contents
 
 * [About](#beatsaber-pp-prediction-plugin)
 * [Installation](#installation)
-  * [Installation](#different-modes)
+  * [Different modes](#different-modes)
 
 
 # Beatsaber PP Prediction Plugin
-Plugin to Predictlive PP Values using a[RandomForestRegressor](https://scikit-learn.org/stable/modules/generated/sklearn.ensemble.RandomForestRegressor.html) weightned on 112302 scores from [Scoresaber](https://www.scoresaber.com/).   
+Plugin to Predictlive PP Values using a [RandomForestRegressor](https://scikit-learn.org/stable/modules/generated/sklearn.ensemble.RandomForestRegressor.html) weightned on 112302 scores from [Scoresaber](https://www.scoresaber.com/).   
+This mod also requires [Counters++](https://github.com/Caeden117/CountersPlus) for the menu options.
 
 The RandomForestRegressor runs at about 300 Iterarions (Messured on a Ryzen 5900x) a second while the trained Keras Model runs at 30 Iterations (ong gpu taking up 5 gigs of vram!) a second.   
 
@@ -19,14 +20,14 @@ In the configuration file ((OR COUNTERS++ SETTIGNS)) `path/to/config.json`, you 
 
 # Nerd Stuff
 ## How it works
-The Plugin starts a Flask API written in Python that has been Compiled with [Pyinstaller](https://www.pyinstaller.org/) on Port 5000.   
-The API has one endpoint called `/predict` which accepts POST and GET requets with a data structure like `{"stars": 6.68, "acc": 0.8943}`   
-The plugin sends this data to the API on each note hit and displays the Predicted PP.   
+The Plugin starts a Flask API written in Python that has been Compiled with [Pyinstaller](https://www.pyinstaller.org/) on Port 8080.   
+The API has one endpoint called `/predict` which accepts GET requets and URL the parameters `stars` and  `acc` like `/predict?stars=5&acc=0.9000` to predict the PP of a 5 star map with an accuracy of 90%.   
+The plugin sends this data to the API on each note hit and displays the predicted PP.   
 
 On ever note hit event this API is called and the value displayed. Thats it.
 
 ## Digging Deeper
-Using the 112302 data blocks we fitted a RandomForestRegressor and found out that it sucks. Like seriosly look at these predicitons.  
+Using the data blocks we fitted a RandomForestRegressor and found out that it sucks. Like seriously look at these predicitons.  
 
 The lines are Stars (1-14), X = Acc and Y = PP   
 
