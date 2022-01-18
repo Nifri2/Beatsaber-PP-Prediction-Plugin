@@ -2,7 +2,7 @@
 
 * [About](#beatsaber-pp-prediction-plugin)
 * [Installation](#installation)
-  * [Installation](#different-modes)
+  * [Different modes](#different-modes)
 
 
 # Beatsaber PP Prediction Plugin
